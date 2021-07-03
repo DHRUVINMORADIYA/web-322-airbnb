@@ -1,0 +1,46 @@
+{{> header}}
+<div class="container" style="padding-top: 8rem;">
+  <form>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="email">Email</label>
+      <input type="email" class="form-control">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="password">Password</label>
+      <input type="password" class="form-control">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="address">Address</label>
+    <input type="text" class="form-control">
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="city">City</label>
+      <input type="text" class="form-control">
+    </div>
+    <div class="form-group col-md-4">
+      <label>Province</label>
+      <select class="form-control">
+        <option value=""></option>
+        <option value="Ontario">Ontario</option>
+        <option value="Manitoba">Manitoba</option>
+        <option value="vancouver">vancouver</option>
+        <option value="Quebec">Quebec</option>
+        <option value="Alberta">Alberta</option>
+        <option value="British Columbia">British Columbia</option>
+        <option value="Nova Scotia">Nova Scotia</option>
+        <option value="...">...</option>
+      </select>
+    </div>
+    <div class="form-group col-md-2">
+      <label for="postalCode">Postal Code</label>
+      <input type="text" class="form-control">
+    </div>
+  </div>
+  <button type="submit" class="btn btn-primary">Signup</button>
+</form>
+</div>
+
+{{> footer}}

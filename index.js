@@ -61,6 +61,6 @@ app.get("/login", (req, res) => {
   res.render("login");
 });
 
-app.listen(8080, () => {
+app.listen(process.env.PORT || 8080, () => {
   console.log("The web server has started on port 8080");
 });

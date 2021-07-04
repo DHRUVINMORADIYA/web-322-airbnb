@@ -2,8 +2,6 @@ const express = require("express");
 const exphbs = require("express-handlebars");
 const app = express();
 
-const PORT = process.env.port || 8080;
-
 app.engine(
   "hbs",
   exphbs({
@@ -63,6 +61,6 @@ app.get("/login", (req, res) => {
   res.render("login");
 });
 
-app.listen(PORT, () => {
+app.listen(process.env.PORT || 8080, () => {
   console.log("The web server has started on port 8080");
 });

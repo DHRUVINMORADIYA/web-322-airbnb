@@ -14,6 +14,7 @@ app.engine(
 );
 
 app.set("view engine", "hbs");
+app.use("/", express.static("./"));
 
 app.get("/", (req, res) => {
   res.render("home");
@@ -59,6 +60,10 @@ app.get("/signup", (req, res) => {
 
 app.get("/login", (req, res) => {
   res.render("login");
+});
+
+app.post("/dashboard", (req, res) => {
+  res.render("dashboard");
 });
 
 app.listen(process.env.PORT || 8080, () => {

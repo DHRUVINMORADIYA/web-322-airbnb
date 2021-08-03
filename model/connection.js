@@ -1,7 +1,6 @@
 const mongoose = require("mongoose");
 
-const URI =
-  "mongodb+srv://dhruvin-moradiya:9974420936Dd@cluster0.vm7vl.mongodb.net/airbnb?retryWrites=true&w=majority";
+const URI = process.env.MONGODB_URI;
 
 const connectDB = async () => {
   await mongoose.connect(URI, {

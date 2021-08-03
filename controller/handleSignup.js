@@ -26,7 +26,6 @@ module.exports = handleSignup = async (req, res) => {
     if (err) {
       return res.json({ success: false, statusCode: 500, message: err });
     } else {
-      //sendEmail(user.email);
       return res.render("userDashboard", {
         email: user.email,
         success: true,

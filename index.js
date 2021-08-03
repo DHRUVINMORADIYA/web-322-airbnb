@@ -1,6 +1,14 @@
 const express = require("express");
 const exphbs = require("express-handlebars");
+const connectDB = require("./model/connection");
 const app = express();
+var bodyParser = require("body-parser");
+const handleLogin = require("./controller/handleLogin");
+const handleSignup = require("./controller/handleSignup");
+
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+connectDB();
 
 app.engine(
   "hbs",
@@ -61,6 +69,9 @@ app.get("/signup", (req, res) => {
 app.get("/login", (req, res) => {
   res.render("login");
 });
+
+app.use("/handleLogin", handleLogin);
+app.use("/handleSignup", handleSignup);
 
 app.post("/dashboard", (req, res) => {
   res.render("dashboard");

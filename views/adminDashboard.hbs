@@ -3,4 +3,33 @@
 <h1 class="welcome-message">Welcome! This is admin dashboard!</h1>
 <h1 class="welcome-message">Your email is {{email}}</h1>
 
+<div class="container" style="padding-top: 8rem;">
+  <form action="/handleAddRoom" method="POST" id="addRoomForm" enctype="multipart/form-data">
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="roomTitle">Room Title</label>
+      <input type="text" class="form-control" id="roomTitle" name="roomTitle" required>
+    </div>
+    <div class="form-group col-md-6">
+      <label for="roomPrice">Price</label>
+      <input type="number" class="form-control" id="roomPrice" name="roomPrice" required>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="roomDescription">Description</label>
+    <input type="text" class="form-control" id="roomDescription" name="roomDescription" required>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="roomLocation">Location</label>
+      <input type="text" class="form-control" id="roomLocation" name="roomLocation" required>
+    </div>
+    <div class="form-group col-md-6">
+      <label for="roomPhoto">Photo</label>
+      <input type="file" class="form-control" id="roomPhoto" name="rPhoto" required>
+    </div>
+  </div>
+  <button type="submit" class="btn btn-primary" id="addRoomButton">Create a room</button>
+</form>
+</div>
 {{> footer}}

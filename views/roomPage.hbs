@@ -1,0 +1,22 @@
+{{> header}}
+
+<div class="container" style="padding-top: 8rem;">
+
+  <form action="/bookRoom" method="POST" id="bookRoom">
+  <div class="form-column">
+    <div class="form-group row-md-6">
+      <img src="{{roomPhoto}}" height="300" width="300"/>
+    </div>
+    {{roomTitle}}
+    <br/>
+    {{roomDescription}}
+    <br/>
+    ${{roomPrice}}/night
+    <br />
+
+  </div>
+  <button type="submit" class="btn btn-primary" id="bookRoom">Book the room</button>
+</form>
+</div>
+
+{{> footer}}

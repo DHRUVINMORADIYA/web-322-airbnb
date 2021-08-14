@@ -18,8 +18,8 @@ const Room = new mongoose.Schema({
     required: true,
   },
   roomPhoto: {
-    data: Buffer,
-    contentType: String,
+    type: String,
+    required: true,
   },
 });
 
